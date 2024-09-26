@@ -1,6 +1,6 @@
 # Automated Testing Best Practices
 
-This README outlines key concepts and best practices for automated testing, particularly useful for SDET (Software Development Engineer in Test) roles.
+This README outlines key concepts and best practices for automated testing, particularly useful for SDET (Software Development Engineer in Test) roles. Use this to help teach others about SDET related job responsibilities. Sharing is caring!
 
 ## 1. Test Pyramid
 
