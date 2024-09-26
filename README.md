@@ -1,6 +1,8 @@
-# AI Chat Application
+# OsirisAI
 
-This project consists of a Go backend and a React frontend for an AI-powered chat application.
+This project was created as a learning exercise to understand how to use Go for creating backend services while building a React frontend. I am always learning and improving my skills, and I hope this project demonstrates my progress as a software developer and my dedication to mastering full-stack development.
+
+# Setup
 
 ## Prerequisites
 
@@ -12,7 +14,7 @@ This project consists of a Go backend and a React frontend for an AI-powered cha
 
 1. Navigate to the backend directory:
    ```
-   cd app/backend
+   cd app/api
    ```
 
 2. Install dependencies:
@@ -54,7 +56,7 @@ The frontend development server will start, typically on `http://localhost:3000`
 
 ## Development
 
-- The backend code is located in `app/backend/main.go`.
+- The backend code is located in `app/api/main.go`.
 - The frontend code is in the `app/frontend/src` directory, with `App.tsx` as the main component.
 - Tailwind CSS is used for styling. The configuration is in `app/frontend/tailwind.config.js`.
 
