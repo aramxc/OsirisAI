@@ -1,6 +1,6 @@
 # OsirisAI
 
-This project was created as a learning exercise to improve my skills in Go for creating backend services while building a React frontend. I am always learning and improving my skills, and I hope this project demonstrates my progress as a software developer and my dedication to mastering full-stack development.
+This project was created as a learning exercise to implement a fully-functional backend written entirely in Go, while building a React frontend in Typescript. I am always learning and improving my skills - I hope this project demonstrates my progress as a software developer and my dedication to mastering full-stack development.
 
 # Setup
 
