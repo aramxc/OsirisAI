@@ -1,6 +1,6 @@
 # OsirisAI
 
-This project was created as a learning exercise to implement a fully-functional backend written entirely in Go, while building a React frontend in Typescript. I am always learning and improving my skills - I hope this project demonstrates my progress as a software developer and my dedication to mastering full-stack development.
+A basic AI chat agent that will eventually be hooked up to a vector database.
 
 # Setup
 
@@ -62,5 +62,5 @@ The frontend development server will start, typically on `http://localhost:3000`
 
 ## Notes
 
-- The backend currently sends random phrases as responses. Implement your AI logic to replace this behavior.
+- The backend currently sends random phrases as responses. Future plan is to implement some AI logic to replace this behavior.
 - Ensure both backend and frontend are running simultaneously for the application to work properly.

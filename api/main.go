@@ -12,7 +12,9 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-var upgrader = websocket.Upgrader{CheckOrigin: func(r *http.Request) bool { return true }}
+var upgrader = websocket.Upgrader{
+	CheckOrigin: func(r *http.Request) bool { return true },
+}
 
 var phrases = []string{
 	"Hello there!",
@@ -37,30 +39,19 @@ func handleWebSocket(w http.ResponseWriter, r *http.Request) {
 	ticker := time.NewTicker(tickerInterval)
 	defer ticker.Stop()
 
-	done := make(chan struct{})
-	go func() {
-		defer close(done)
-		for {
-			_, msg, err := conn.ReadMessage()
+	for {
+		select {
+		case <-ticker.C:
+			if err := conn.WriteJSON(generateResponse()); err != nil {
+				log.Printf("Error writing to WebSocket: %v", err)
+				return
+			}
+		default:
+			_, _, err := conn.ReadMessage()
 			if err != nil {
 				log.Printf("Error reading message: %v", err)
 				return
 			}
-			log.Printf("Received message: %s", string(msg))
-			// Here you can process the received message if needed
-		}
-	}()
-
-	for {
-		select {
-		case <-ticker.C:
-			response := generateResponse()
-			if err := conn.WriteJSON(response); err != nil {
-				log.Printf("Error writing to WebSocket: %v", err)
-				return
-			}
-		case <-done:
-			return
 		}
 	}
 }
